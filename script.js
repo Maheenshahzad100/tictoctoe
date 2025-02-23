@@ -93,7 +93,7 @@ function checkwinner(){
                cross.style.display="flex"
                 winnerdiv.innerHTML="<h1>It's a Tie</h1>"
             cross.innerText="TRY AGAIN"
-              },200)
+              },250)
              }
         }
         
@@ -106,7 +106,7 @@ setTimeout(()=>{
     winnerdiv.innerHTML="<h3>Congratulations, the winner is</h3> </br> <h1>PLAYER1</>"
     enablebtns ()
     counting = 0;
-},150)   
+},250)   
 };
 const whoisthewinner2 = (winner) => {
     setTimeout(()=>{
@@ -116,7 +116,7 @@ const whoisthewinner2 = (winner) => {
         winnerdiv.innerHTML="<h3>Congratulations, the winner is</h3> </br> <h1>PLAYER2</>"
             enablebtns ()
         counting = 0;
-    },150)   
+    },250)   
     };
 let findscore=document.querySelector(".score")
 
