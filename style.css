@@ -21,7 +21,7 @@ flex-direction: column;
 .container .reset,  .close ,.cross{
     width: 180px;
     height: 50px;
- margin: 2rem;
+ margin-top: 1rem;
   border-radius: 10px;
     border: none;
     border: 2px solid black;
