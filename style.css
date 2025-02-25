@@ -4,10 +4,13 @@
 }
 body{
     font-family: serif;
-    background-color: goldenrod ;
+    background-color: black ;
+    color: white;
+   
 }
 .container{
-    width: 100vw;
+    min-width: 100vw;
+    max-width:fit-content;
 height: 100vh;
 display: flex;
 align-items: center;
@@ -20,12 +23,12 @@ flex-direction: column;
 }
 .container .reset,  .close ,.cross{
     width: 180px;
-    height: 50px;
- margin: 2rem;
+    height: 80px;
+ margin-top: 1rem;
   border-radius: 10px;
     border: none;
-    border: 2px solid black;
-    color: black;
+    border: 2px solid white;
+ 
     font-size: 1.7rem;
     cursor: pointer;
 }
@@ -37,18 +40,20 @@ flex-direction: column;
     justify-content: right;
 }
 .container .dabba .score {
-width: 200px;
-    height: 50px;
+min-width: 100px;
+    min-height: 50px;
+    max-width: fit-content;
+    max-height: fit-content;
 
 
 border: none;
-border: 2px solid black;
+border: 2px solid white;
 font-size: 1.5rem;
 }
 .container .game{
 width: 480px;
 height: 450px;
-background-color: white;
+
 display: flex;
 align-items: center;
 justify-content: center;
@@ -62,14 +67,16 @@ flex-wrap: wrap;
     width: 160px;
     height: 150px;
     border: none;
-    border: 2px solid black;
+    border: 2px solid white;
     font-size: 90px;
     font-family: cursive;
+
 
 }
 .popup, .winnerboard{
     position: fixed;
     top: 0;
+ 
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -86,14 +93,15 @@ flex-wrap: wrap;
 .popup .scoreboard{
     width: 500px;
     height: 400px;
-    background: rgb(175,138,63);
-    background: linear-gradient(90deg, rgba(175,138,63,0) 0%, rgba(218,165,32,1) 0%, rgba(163,152,17,1) 100%);    align-items: center;
+    background: rgb(26, 55, 153);
     justify-content: center;
    flex-wrap: wrap;
+   border: 2px white solid;
    color: white;
 display: flex;
     flex-direction: column;
     display: none;
+    align-items: center;
 }
 .popup .scoreboard h1{
     font-size: 2rem;
@@ -105,7 +113,7 @@ display: flex;
     margin-bottom: 20px;
 }
  .close{
-    width: 200px;
+    width: 300px;
 
 }
  
@@ -113,14 +121,14 @@ display: flex;
 .winnerboard .winnerdiv{
     width: 500px;
     height: 400px;
-    background: rgb(175,138,63);
-    background: linear-gradient(90deg, rgba(175,138,63,0) 0%, rgba(218,165,32,1) 0%, rgba(163,152,17,1) 100%);    align-items: center;
+    background: rgb(26, 55, 153);
     align-items: center;
     justify-content: center;
    flex-wrap: wrap;
     flex-direction: column;
     display: none;
     color: white;
+    border: 2px white solid;
 }
 .winnerboard .winnerdiv h1{
     font-size: 3rem;
@@ -133,10 +141,176 @@ display: flex;
     margin-bottom: 20px;
 }
  .cross{
-    width: 200px;
+    width: 300px;
     display: none;
 display: flex;
 justify-content: center;
 align-items: center;
 }
+
+button {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  
+  button:hover {
+    background: rgb(61, 106, 255);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  
+  button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+  
  
+@media (max-width:768px) {
+    .container .reset,  .close ,.cross{
+        width: 200px;
+        height: 50px;
+     margin-top: 1rem;
+
+
+        font-size: 1rem;
+   
+    }
+    .container .dabba{
+        width: 100%;
+ 
+        align-items: center;
+        justify-content: center;
+    }
+    .container .dabba .score {
+        width: 200px;
+            height: 50px;
+        
+        margin-top: 20px;
+     
+        font-size: 1rem;
+        }
+        .container{
+            min-width: 100vw;
+            max-width:fit-content;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        }
+        .container .game .btn {
+            width: 120px;
+            height: 120px;
+        
+            font-size: 60px;
+        
+        }
+        .container .game{
+            width: 400px;
+            height: 350px;
+            background-color: transparent;
+           
+            
+            
+            
+            }
+}
+
+@media (max-width:400px) {
+    .container .game .btn {
+        width: 100px;
+        height: 100px;
+        font-size: 50px;
+       
+
+    
+    }
+    .container .game{
+        width: 300px;
+        height: 300px;
+        background-color: transparent;
+       
+        
+        
+        
+        }
+}
+@media (max-width:350px) {
+    .container .game .btn {
+        width: 70px;
+        height: 70px;
+    
+        font-size: 40px;
+     
+    
+    }
+    .container .game{
+        width: 250px;
+        height: 200px;
+        background-color: transparent;
+       
+        
+        
+        
+        }
+        .container h3{
+            font-size: 0.9rem;
+        }
+}
